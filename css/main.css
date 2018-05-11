@@ -1,0 +1,124 @@
+/* Main Styling */
+
+/*
+    *Master styling*
+*/
+
+:root {
+    --main-font-color: green; 
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+body {
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+font-family: 'Asap', sans-serif;
+color: var(--main-font-color);
+text-align: center;
+}
+
+a {
+    color: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+body {
+	margin: 0;
+    font-size: 20px;
+}
+p {
+    font-size:1em;
+}
+
+h2 {
+    font-family: 'Zeyada', Arial;
+    font-weight:800;
+    font-size: 3.7em;
+    text-align:center;
+}
+
+h3 {
+    font-family: 'Asap', sans-serif;
+    font-size: 1.6em;
+}
+
+hr  {
+    width: 80%;
+}
+
+.row {
+    margin: auto 0;
+}
+
+.alignleft {
+    float: left;
+    padding: 10px;
+}
+
+.alignright {
+    float: right;
+    padding: 10px;
+}
+
+/*Navigation*/
+.nav-container {
+	background: black;
+}
+
+nav ul {
+	margin: 0;
+	padding:0;
+	list-style: none;
+	display:flex;
+	height: 80px;
+}
+
+nav li {
+	flex:1;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav a {
+	text-decoration: none;
+	padding:20px;
+	display: inline-block;
+	transition:all 0.2s;
+	text-transform: uppercase;
+}
+
+nav li:last-child, nav li:first-child {
+	background: white;
+	border: black solid 8px;
+}
+
+/* Jumbotron Home */
+.home-jumbotron {
+    height: 500px;
+    display: flex;
+    background-attachment: fixed;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images.unsplash.com/photo-1504643039591-52948e3ddb47?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=caa0ffb3f714ebc5ffded0426b7ff785&auto=format&fit=crop&w=1050&q=80');
+}
