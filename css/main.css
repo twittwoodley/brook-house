@@ -129,17 +129,23 @@ nav li:last-child, nav li:first-child {
 }
 
 .inner-cont {
-/*     width: 33.3333%;
- */
-flex: 1}
+    flex: 1
+}
 
 /*Flex Panel*/
+.panels-cont {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    }
 
     .panels {
       min-height:60vh;
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      width: 75%;
+      max-width: 1160px;
     }
 
     .panel {
@@ -161,6 +167,7 @@ flex: 1}
       display: flex;
       justify-content: center;
       flex-direction: column;
+      overflow: hidden;
     }
 
 
