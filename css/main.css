@@ -187,9 +187,9 @@ nav li:last-child, nav li:first-child {
       align-items: center;
     }
 
-    .panel > *:first-child {
-      transform: translateY(-100%);
-    }
+/*     .panel > *:first-child {
+  transform: translateY(-100%);
+} */
 
     .panel.text-active > *:first-child {
       transform: translateY(0);
@@ -209,7 +209,7 @@ nav li:last-child, nav li:first-child {
       text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
       font-size: 1.5em;
     }
-    .panel p:nth-child(2) {
+    .panel p:nth-child(2), .panel h3 {
       font-size: 4em;
     }
 
