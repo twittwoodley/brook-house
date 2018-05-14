@@ -51,7 +51,7 @@ p {
 h2 {
     font-family: Arial;
     font-weight:800;
-    font-size: 3.7em;
+    font-size: 2em;
     text-align:center;
 }
 
@@ -135,6 +135,7 @@ nav li:last-child, nav li:first-child {
 /*Flex Panel*/
 .panels-cont {
     display: flex;
+    position: relative;
     align-items: center;
     flex-direction: column;
     }
@@ -195,25 +196,29 @@ nav li:last-child, nav li:first-child {
       transform: translateY(0);
     }
 
-    .panel > *:last-child{
-      transform: translateY(100%);
-    }
+/*     .panel > *:last-child{
+  transform: translateY(100%);
+} */
 
         .panel.text-active > *:last-child {
       transform: translateY(0);
     }
 
     .panel p {
-      text-transform: uppercase;
-      font-family: 'Amatic SC', cursive;
-      text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-      font-size: 1.5em;
-    }
-    .panel p:nth-child(2), .panel h3 {
-      font-size: 4em;
-    }
+/*       text-transform: uppercase;
+ *//*       font-family: 'Amatic SC', cursive;
+       */      text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+/*       font-size: 1.5em;
+     */    display: none;
+     opacity: 0;
+}
 
     .panel.open {
       font-size:40px;
       flex: 2;
+    }
+/*Look at using max-height:0, opacity and transitionend/ settimeout to  get the desired effect*/
+    .panel.open >p {
+      display: flex;
+    opacity: 1;
     }

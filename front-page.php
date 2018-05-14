@@ -29,31 +29,6 @@
 <div class="panels-cont">
 	<h2>Why Exmouth?</h2>
 	<div class="panels">
-	    <div class="panel panel1">
-	      <p>Hey</p>
-	      <p>Let's</p>
-	      <p>Dance</p>
-	    </div>
-	    <div class="panel panel2">
-	      <p>Give</p>
-	      <p>Take</p>
-	      <p>Receive</p>
-	    </div>
-	    <div class="panel panel3">
-	      <p>Experience</p>
-	      <p>It</p>
-	      <p>Today</p>
-	    </div>
-	    <div class="panel panel4">
-	      <p>Give</p>
-	      <p>All</p>
-	      <p>You can</p>
-	    </div>
-	    <div class="panel panel5">
-	      <p>Life</p>
-	      <p>In</p>
-	      <p>Motion</p>
-	    </div>
 <?php
          $exmouthPosts = new WP_Query(array(
           'posts_per_page' => 3,
@@ -64,8 +39,8 @@
            $exmouthPosts->the_post(); ?>
            	<div class="panel" style="background-image:url(<?php echo get_field('background_image') ?>)">
 		      <h3><?php the_title(); ?></h3>
-		      <p><?php the_excerpt() ?></p>
-	    	</div>
+				<p><?php the_excerpt() ?></p>
+			</div>
             <?php } wp_reset_postdata();?>	    
 	  </div>
 </div>
