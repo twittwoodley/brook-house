@@ -158,9 +158,9 @@ nav li:last-child, nav li:first-child {
       /* Safari transitionend event.propertyName === flex */
       /* Chrome + FF transitionend event.propertyName === flex-grow */
       transition:
-        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
-        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
-        background 0.2s;
+      font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), 
+      flex 0.7s cubic-bezier(0.43, 0.35, 0.06, 0.96), 
+      background 0.2s;
       font-size: 20px;
       background-size:cover;
       background-position:center;
@@ -186,6 +186,7 @@ nav li:last-child, nav li:first-child {
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: 0.7s;
     }
 
 /*     .panel > *:first-child {
@@ -200,25 +201,36 @@ nav li:last-child, nav li:first-child {
   transform: translateY(100%);
 } */
 
-        .panel.text-active > *:last-child {
+/*         .panel.text-active > *:last-child {
       transform: translateY(0);
     }
-
+ */
     .panel p {
 /*       text-transform: uppercase;
  *//*       font-family: 'Amatic SC', cursive;
        */      text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
 /*       font-size: 1.5em;
-     */    display: none;
-     opacity: 0;
-}
+     */        opacity: 0;
+    max-height: 0;
+    transition: 0.7s;
+    transform: translateY(50%);
+  }
+
+  .panel h3 {
+    transition: font-size 0.5s cubic-bezier(0.61,-0.19, 0.7,-0.11);
+  }
 
     .panel.open {
-      font-size:40px;
       flex: 2;
     }
 /*Look at using max-height:0, opacity and transitionend/ settimeout to  get the desired effect*/
     .panel.open >p {
       display: flex;
     opacity: 1;
+    max-height: none;
+    transform: translateY(0);
+    }
+
+    .panel.open >h3 {
+      font-size: 2.5em;
     }
