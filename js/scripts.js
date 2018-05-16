@@ -15,24 +15,28 @@
     window.addEventListener('scroll', fixNav);
 */
 
-    const panels = document.querySelector('.panels');
-    const panel = document.querySelectorAll('.panel');
+    const panels = document.querySelectorAll('.panel');
 
-    function openPanel() {
-      //Removes all '.open' classes from panels
-      panel.forEach(panel => {
+    function toggleOpen() {
+      console.log('Hello');
+            //Removes all '.open' classes from panels
+      panels.forEach(panel => {
       panel.classList.remove('open');
       });
-      //Adds '.open' class to this
-      this.classList.add('open');
-      //Removes all '.open-active' classes from panels. This class reveals text from top and bottom of screen.
-      panel.forEach(panel => {
-        panel.classList.remove('text-active');
-      });
-      //Adds class to reveal text
-      this.classList.add('text-active')
-      }
+      this.classList.toggle('open');
 
-    panel.forEach(panel => {
-      panel.addEventListener('click', openPanel)
-    });    
+    }
+
+    function toggleActive(e) {
+/*      console.log(e.propertyName);
+*/      if (e.propertyName === ('max-height')) {
+          console.log('Yeah');
+        panels.forEach(panel => {
+        panel.classList.remove('text-active')
+        });
+        this.classList.add('text-active');
+      }
+    }
+
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));

@@ -31,15 +31,15 @@
 	<div class="panels">
 <?php
          $exmouthPosts = new WP_Query(array(
-          'posts_per_page' => 3,
-          'post_type' => array('exmouth')
+/*          'posts_per_page' => 3,
+*/          'post_type' => array('exmouth')
          ));
 
          while($exmouthPosts->have_posts()) {
            $exmouthPosts->the_post(); ?>
            	<div class="panel" style="background-image:url(<?php echo get_field('background_image') ?>)">
 		      <h3><?php the_title(); ?></h3>
-				<p><?php the_excerpt() ?></p>
+				<p class="panel-excerpt"><?php the_excerpt() ?></p>
 			</div>
             <?php } wp_reset_postdata();?>	    
 	  </div>

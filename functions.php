@@ -19,7 +19,7 @@ remove_filter( 'the_excerpt', 'wpautop' );
 function custom_post_types() {
 	register_post_type('Exmouth', array(
 		'supports' => array('title', 'editor', 'excerpt'),
-		'rewrite' => array('slug' => 'Why Exmouth'),
+		'rewrite' => array('slug' => 'exmouth'),
 		'has_archive' => true,
 		'public' => true,
 		'labels' => array(
