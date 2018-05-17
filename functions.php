@@ -1,6 +1,7 @@
 <?php
 function brook_house_theme_files() {
 	//wp_enqueue_script('jquery');
+	wp_enqueue_script('google-map', '//maps.googleapis.com/maps/api/js?key=AIzaSyC9zI3I2TQYp5JJ2rksxJ2QV4vp8wjHCIE', NULL, microtime(), true);
 	wp_enqueue_script('main-js', get_theme_file_uri('/js/scripts.js'), NULL, microtime(), true);
 	wp_enqueue_style('custom-google-font', '//fonts.googleapis.com/css?family=Parisienne|Poiret+One'); //Google Font
 	//wp_enqueue_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'); //Font Awesome
@@ -35,3 +36,26 @@ function custom_post_types() {
 
  add_action('init', 'custom_post_types');
 
+//removes header admin bar
+function carly_ann_features() {
+	add_theme_support('title-tag');
+  	register_nav_menu('header-menu',__( 'Header Menu' ));
+	add_theme_support('post-thumbnails');
+}
+
+add_action('after_setup_theme', 'carly_ann_features');
+
+function remove_admin_login_header() { //Removes Admin Header Bar
+    remove_action('wp_head', '_admin_bar_bump_cb');
+}
+
+add_action('get_header', 'remove_admin_login_header');
+
+show_admin_bar( false );
+
+//Gmaps
+function universityMapKey($api) {
+	$api['key'] = 'AIzaSyC9zI3I2TQYp5JJ2rksxJ2QV4vp8wjHCIE';
+	return $api;
+}
+add_filter('acf/fields/google_map/api', 'universityMapKey');

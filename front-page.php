@@ -8,7 +8,7 @@
 <?php
 	get_template_part('template-parts/content', 'navigation');
 ?>
-
+<div class="content-wrap">
 <div class="container">
 	<div class="inner-cont">
 		<h3>Brook</h3>
@@ -26,6 +26,11 @@
 		</p>
 	</div>
 </div>
+<div class="front-page-gallery">
+	<h3>Have a look at Brook House Annexe</h3>
+	<?php echo do_shortcode('[metaslider id="42"]'); ?>
+</div>
+
 <div class="panels-cont">
 	<h2>Why Exmouth?</h2>
 	<div class="panels">
@@ -41,17 +46,16 @@
            	<div class="dark-underlay"></div>
 
 		      <h3><?php the_title(); ?></h3>
-				<p class="panel-excerpt"><?php the_excerpt() ?></p>
+				<p class="panel-excerpt">
+					<?php the_excerpt() ?>
+					<br>
+					<span class="read-more"><a href="<?php the_permalink() ?>">Read More >></a></span>
+				</p>
 			</div>
             <?php } wp_reset_postdata();?>	    
 	  </div>
 </div>
-
-
-        
-
-<?php 
-	echo do_shortcode('slide-anything id="17"');
-
+</div><!-- Content-wrap closing div -->
+<?php
 	get_footer();
 ?>
