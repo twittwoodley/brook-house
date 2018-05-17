@@ -5,7 +5,11 @@
 */
 
 :root {
-    --main-font-color: green; 
+    --main-font-color: #8e00d1;
+    --body-font: 'Poiret One';
+    --heading-font: 'Parisienne';
+    --grey: #b5b5b5;
+    --wheat:  #fce9c9;
 }
 
 html {
@@ -23,7 +27,7 @@ body {
 }
 
 * {
-font-family: sans-serif;
+font-family: var(--body-font);
 color: var(--main-font-color);
 text-align: center;
 }
@@ -48,15 +52,19 @@ p {
     font-size:1em;
 }
 
+h1 {
+  font-family: var(--heading-font);
+}
+
 h2 {
-    font-family: Arial;
+    font-family: var(--heading-font);
     font-weight:800;
     font-size: 2em;
     text-align:center;
 }
 
 h3 {
-    font-family: sans-serif;
+    font-family: var(--heading-font);
     font-size: 1.6em;
 }
 
@@ -80,7 +88,7 @@ hr  {
 
 /*Navigation*/
 .nav-container {
-	background: black;
+	background: var(--wheat);
 }
 
 nav ul {
@@ -97,6 +105,8 @@ nav li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+border-bottom: 5px inset rgba(252, 233, 201, 0.5);
+
 }
 
 nav a {
@@ -105,11 +115,23 @@ nav a {
 	display: inline-block;
 	transition:all 0.2s;
 	text-transform: uppercase;
+  font-weight: 800;
 }
 
-nav li:last-child, nav li:first-child {
-	background: white;
-	border: black solid 8px;
+/* nav li:last-child, nav li:first-child {
+  background: white;
+  border: var(--grey) solid 8px;
+} */
+
+nav li:first-child a {
+  text-transform: none;
+  font-family: var(--heading-font);
+}
+
+nav li:hover {
+  background-color: white;
+  border-bottom: 5px inset rgba(252, 233, 201, 0.5);
+  text-decoration: underline;
 }
 
 /* Jumbotron Home */
@@ -121,6 +143,12 @@ nav li:last-child, nav li:first-child {
   justify-content: center;
   align-items: center;
   background-image: url('https://images.unsplash.com/photo-1504643039591-52948e3ddb47?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=caa0ffb3f714ebc5ffded0426b7ff785&auto=format&fit=crop&w=1050&q=80');
+}
+
+.home-jumbotron h1 {
+  font-size: 5em;
+      color: wheat;
+    text-shadow: var(--grey) -4px 1px 12px;
 }
 
 /*Info Thrids*/
@@ -162,12 +190,14 @@ nav li:last-child, nav li:first-child {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .panel h3 {
   font-size: 3em;
   padding: 20px;
   margin-bottom: 0;
+  z-index: 2;
 }
 
 .panel p {
@@ -177,6 +207,7 @@ nav li:last-child, nav li:first-child {
   opacity: 0;
   transition: 1s;
   transform: translateY(100%);
+  z-index: 2;
 
 }
 
@@ -188,4 +219,14 @@ nav li:last-child, nav li:first-child {
 .panel.text-active p {
   opacity: 1;
   transform: translateY(0%);  
+}
+
+.dark-underlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0;
+  transition: 0.5s;
 }
