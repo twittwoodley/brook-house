@@ -200,8 +200,18 @@ li.logo {
   flex: 1
 }
 
+.inner-cont p {
+      padding: 0 20px 5px 20px;
+}
+
 .inner-cont:nth-child(odd) {
   background: var(--wheat);
+}
+
+/* Slider */
+.front-page-gallery {
+    display: table;
+    margin: 0 auto;
 }
 
 /*Flex Panel*/
@@ -217,8 +227,9 @@ li.logo {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  max-width: 1160px;
-}
+  max-width: 1480px;
+  width: 100%;
+  border-radius: 10px;}
 
 .panel {
   background: #6B0F9C;
