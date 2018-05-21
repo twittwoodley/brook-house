@@ -2,13 +2,18 @@
 	get_header();
 
 ?>
-	<section class="home-jumbotron">
-		<h1>Brook House<br>Annexe</h1>
+	<section class="home-jumbotron" style="background-image: url(<?php echo get_theme_file_uri('/img/brook-house-cover.jpg'); ?>)">
+		<div class="jumbo-dark-underlay dark-underlay"></div>
+		<div class="inner-jumbo">
+			<div class="bar"></div>
+			<img src="<?php echo get_theme_file_uri('/img/carly-logo-white.png'); ?>">
+			<div class="bar"></div>
+		</div>
 	</section>
 <?php
 	get_template_part('template-parts/content', 'navigation');
 ?>
-<div class="content-wrap">
+<!-- <div class="content-wrap">
 <div class="container">
 	<div class="inner-cont">
 		<h3>Brook</h3>
@@ -29,10 +34,30 @@
 <div class="front-page-gallery">
 	<h3>Have a look at Brook House Annexe</h3>
 	<?php echo do_shortcode('[metaslider id="42"]'); ?>
-</div>
+</div> -->
+			<h2>About Brook House</h2>
 
+	<div class="about-section">
+		<div>
+			<ul>
+				<li><div class="about-icon"></div>
+					<h2>Sleep</h2><br>
+					Brook house can accomodate up to 4 people. It comes with 1 doubole bedroom, with the addition of a comfortable sofa bed situated in the lounge area.
+				</li>
+				<li>
+					<h2>Eat</h2><br>
+					If you fancy eating in, you can use the private, fully equiped kitchen
+				</li>
+				<li>
+					<h2>Relax</h2><br>
+					Had a long day exploring the wonderful surroundings? Relax in your own private living room.
+				</li>
+			</ul>
+		</div>
+		<div><h2>A perfect getaway in a perfect location</h2> <br>Maecenas nec tortor ultricies, tempus mauris id, blandit ligula. Vivamus finibus lacus non sagittis pellentesque. Sed viverra placerat venenatis. Integer nulla erat, placerat id congue ut, pellentesque et quam. Duis imperdiet odio non sem eleifend, sed imperdiet diam sollicitudin. Integer at vulputate nisi. Suspendisse laoreet at dolor placerat mollis</div>
+	</div>
 <div class="panels-cont">
-	<h2>Why Exmouth?</h2>
+	<h2>The Best Of Exmouth</h2>
 	<div class="panels">
 <?php
          $exmouthPosts = new WP_Query(array(

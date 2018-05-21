@@ -1,6 +1,6 @@
 <nav id="main" class="nav-container">
 	<ul>
-      <li class="logo"><a href="#">Brook House <br> Annexe</a></li>
+      <li class="logo"><a href="#"><img src="<?php echo get_theme_file_uri('/img/carly-logo-white.png'); ?>"></a></li>
       <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Images</a></li>

@@ -5,11 +5,11 @@
 */
 
 :root {
-    --main-font-color: #8e00d1;
-    --body-font: 'Poiret One';
-    --heading-font: 'Parisienne';
+    --main-font-color: #528451;
+    --body-font: 'Poiret One', monospace;
+    --heading-font: 'Parisienne', monospace;
     --grey: #b5b5b5;
-    --wheat:  #fce9c9;
+    --wheat:  #fff4e2;
 }
 
 html {
@@ -76,8 +76,8 @@ hr  {
 /*   width: 95%;
 max-width: 1100px; */
   margin: 0 auto;
-  transform: scale(0.98);
-  transition: transform 0.5s;
+/*   transform: scale(0.98);
+transition: transform 0.5s; */
 }
 
 body.fixed-nav .content-wrap {
@@ -107,7 +107,7 @@ body.fixed-nav .content-wrap {
 
 /*Navigation*/
 .nav-container {
-	background: var(--wheat);
+	background: rgba(82, 132, 81, 0.97);
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -127,7 +127,9 @@ nav li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-border-bottom: 5px inset rgb(252, 233, 201);
+/*   border-bottom: 5px inset rgb(252, 233, 201);
+   */  color: var(--wheat);
+   transition: 0.5s;
 
 }
 
@@ -141,8 +143,8 @@ nav a {
 }
 
 nav li:last-child, nav li:first-child {
-  background: white;
-/*   border: var(--grey) solid 8px;
+/*   background: white;
+ *//*   border: var(--grey) solid 8px;
  */}
 
 nav li:first-child a {
@@ -152,9 +154,10 @@ nav li:first-child a {
 
 nav li:hover {
   background-color: white;
-  border-bottom: 5px inset rgb(252, 233, 201);
-  text-decoration: underline;
-}
+  color: var(--main-font-color);
+/*   border-bottom: 5px inset rgb(252, 233, 201);
+ *//*   text-decoration: underline;
+ */}
 
 body.fixed-nav nav {
   position: fixed;
@@ -164,10 +167,14 @@ body.fixed-nav nav {
 li.logo {
   max-width:0;
   overflow: hidden;
-  background: white;
-  transition: all 0.5s;
+/*   background: white;
+   */  transition: all 0.5s;
   font-weight: 600;
   font-size: 30px;
+}
+
+li.logo img {
+  height: 70px;
 }
 
 .fixed-nav li.logo {
@@ -182,14 +189,79 @@ li.logo {
   background-size: cover;
   justify-content: center;
   align-items: center;
-  background-image: url('https://images.unsplash.com/photo-1504643039591-52948e3ddb47?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=caa0ffb3f714ebc5ffded0426b7ff785&auto=format&fit=crop&w=1050&q=80');
+  position: relative;
 }
 
 .home-jumbotron h1 {
   font-size: 5em;
-      color: wheat;
-    text-shadow: var(--grey) -4px 1px 12px;
+  color: wheat;
+  text-shadow: var(--grey) -4px 1px 12px;
 }
+
+.inner-jumbo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.bar {
+  width: 100px;
+  max-width: 100px;
+  height: 4px;
+  background-color: white;
+}
+
+.home-jumbotron img {
+  width: 177%;
+  max-width: 280px;
+}
+
+.title-cont {
+  width: auto;
+  /* max-width: 300px; */
+  text-align: center;
+  padding: 27px;
+}
+
+.title-cont h2 {
+  color: white;
+  font-weight: 400;
+  font-size: 6em;
+}
+
+/* ABOUT SECTION*/
+
+.about-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-section div {
+  flex: 1 0 50%;
+  padding: 10px 100px;
+}
+
+.about-section ul {
+  list-style-type: none;
+/*   margin: 10px 100px;
+ */}
+
+.about-section h2 {
+  margin: 0;
+}
+
+.about-section .about-icon {
+    width: 70px;
+    height: 70px;
+    background-color: blue;
+    border-radius: 100%;
+    padding: 0;
+}
+
+/* .about-section p {
+  flex: 1 1 400px;
+} */
 
 /*Info Thrids*/
 .container {
@@ -201,7 +273,8 @@ li.logo {
 }
 
 .inner-cont p {
-      padding: 0 20px 5px 20px;
+  padding: 0 20px 5px 20px;
+  color: black;
 }
 
 .inner-cont:nth-child(odd) {
@@ -223,13 +296,14 @@ li.logo {
     }
 
 .panels {
-  min-height:60vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  max-width: 1480px;
-  width: 100%;
-  border-radius: 10px;}
+    min-height: 70vh;
+    overflow: hidden;
+    display: flex;
+    /* flex-direction: column; */
+    /* max-width: 1480px; */
+    /* width: 100%; */
+    border-radius: 10px;
+}
 
 .panel {
   background: #6B0F9C;
@@ -245,6 +319,7 @@ li.logo {
   align-items: center;
   flex-direction: column;
   position: relative;
+  flex: 1;
 }
 
 .panel h3 {
@@ -252,6 +327,8 @@ li.logo {
   padding: 20px;
   margin-bottom: 0;
   z-index: 2;
+  color: white;
+  text-shadow: 1px 1px 10px grey;
 }
 
 .panel p {
@@ -262,6 +339,7 @@ li.logo {
   transition: 1s;
   transform: translateY(100%);
   z-index: 2;
+  color: white;
 
 }
 
@@ -287,4 +365,9 @@ li.logo {
 
 .dark-underlay-active .dark-underlay {
   opacity: 1;
+}
+
+.jumbo-dark-underlay {
+  opacity: 1;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7));
 }
