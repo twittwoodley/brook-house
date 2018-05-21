@@ -231,37 +231,34 @@ li.logo img {
 }
 
 /* ABOUT SECTION*/
-
 .about-section {
   display: flex;
-  flex-direction: row;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
-.about-section div {
+.about-section .about-inner {
+  display: flex;
   flex: 1 0 50%;
-  padding: 10px 100px;
+  padding: 10px 50px;
 }
 
-.about-section ul {
-  list-style-type: none;
-/*   margin: 10px 100px;
- */}
-
-.about-section h2 {
-  margin: 0;
+.about-section .about-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-section .about-icon {
-    width: 70px;
-    height: 70px;
-    background-color: blue;
-    border-radius: 100%;
-    padding: 0;
+  width: 150px;
+  height: 150px;
+  background-color: var(--main-font-color);
+  border-radius: 100%;
 }
 
-/* .about-section p {
-  flex: 1 1 400px;
-} */
+.about-text-container {
+  padding: 10px 30px;  
+}
 
 /*Info Thrids*/
 .container {
