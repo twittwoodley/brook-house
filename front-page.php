@@ -31,34 +31,96 @@
 		</p>
 	</div>
 </div>
-<div class="front-page-gallery">
-	<h3>Have a look at Brook House Annexe</h3>
-	<?php echo do_shortcode('[metaslider id="42"]'); ?>
-</div> -->
+-->
 <div class="about-section">
 	<div>
 	<div class="about-inner">
 		<div class="about-icon-container">
-			<div class="about-icon"></div>
+			<div class="about-icon"><i class="fa fa-bed"></i></div>
 		</div>
 		<div class="about-text-container">
 			<h2>Sleep</h2>
-			<p>Maecenas nec tortor ultricies, tempus mauris id, blandit ligula. Vivamus finibus lacus non sagittis pellentesque. Sed viverra placerat venenatis.Sed viverra placerat venenatis.Sed viverra placerat venenatis.</p>
+			<p>Brook house can accomodate up to 4 people. It comes with 1 doubole bedroom, with the addition of a comfortable sofa bed situated in the lounge area.</p>
 		</div>
 	</div>
 	<div class="about-inner">
 		<div class="about-icon-container">
-			<div class="about-icon"></div>
+			<div class="about-icon"><i class="fa fa-utensils"></i></div>
 		</div>
 		<div class="about-text-container">
-			<h2>Sleep</h2>
-			<p>Maecenas nec tortor ultricies, tempus mauris id, blandit ligula. Vivamus finibus lacus non sagittis pellentesque. Sed viverra placerat venenatis.</p>
+			<h2>Eat</h2>
+			<p>If you fancy eating in, you can use the private, fully equiped kitchen</p>
+		</div>
+	</div>
+		<div class="about-inner">
+		<div class="about-icon-container">
+			<div class="about-icon"><i class="fa fa-couch"></i></div>
+		</div>
+		<div class="about-text-container">
+			<h2>Relax</h2>
+			<p>Had a long day exploring the wonderful surroundings? Relax in your own private living room.</p>
 		</div>
 	</div>
 	</div>
-	<div class="about-inner">Maecenas nec tortor ultricies, tempus mauris id, blandit ligula. Vivamus finibus lacus non sagittis pellentesque. Sed viverra placerat venenatis.</div>
+	<div class="about-inner" style="background: var(--wheat)"><div>
+		<h2 style="margin-top: 43px;">A perfect getaway in a perfect location</h2>
+Nullam magna velit, vestibulum et massa vel, pretium fringilla odio. Maecenas at facilisis massa. Donec a nunc blandit, scelerisque tellus et, pharetra quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed tempus est. Vestibulum vehicula tortor sem, vitae aliquam lacus fringilla at. Maecenas vel ante lacus. Nunc mollis et lectus sed consequat. Fusce iaculi.
+<br><br>
+Cras tempus nunc venenatis orci efficitur, ac accumsan sem ultrices. Curabitur interdum lacus ut justo sodales porta. Aliquam ante velit, consequat ut augue quis, tincidunt viverra orci. Nam cursus, ligula vitae imperdiet interdum, odio orci condimentum lectus, interdum dictum tortor mauris a tellus.
+<br><br>
+Praesent ut lacus dapibus dolor semper convallis eu vel mauris. Phasellus orci massa, convallis ut hendrerit in, scelerisque eget leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut enim sem, malesuada quis augue non, mollis blandit erat. Nullam in aliquet tortor. Nulla tellus justo, eleifend ut nibh eget, fermentum ultrices odio. Mauris a dolor sed mauris accumsan viverra. 
+<br><br>
+Etiam a feugiat augue. Vivamus a finibus purus, id posuere turpis. Vestibulum quis elit quis lectus accumsan iaculis quis ac tellus. Nam sed urna nisi. Aenean lacinia pellentesque nibh ut cursus. Proin ac tortor sit amet erat lobortis mollis. Vestibulum bibendum vulputate nulla.<br><br></p></div>
+</div>
 	</div>
 
+<!-- <div class="front-page-gallery">
+	<h3>Have a look at Brook House Annexe</h3>
+	<?php echo do_shortcode('[metaslider id="42"]'); ?>
+</div> -->
+<section>
+	<div id="gallery">
+
+
+		<div id="bigimages">
+			<div id="normal1" style="background-image: url(<?php echo get_theme_file_uri('/img/beach-ph.jpg'); ?>)">
+				<div class="inner-gallery-overlay">This is the image description</div>
+			</div>
+
+			<div id="normal2" style="background-image: url(<?php echo get_theme_file_uri('/img/chalet-ph.jpg'); ?>)">
+			</div>
+			
+			<div id="normal3" style="background-image: url(<?php echo get_theme_file_uri('/img/garden-ph.jpg'); ?>)">
+			</div>
+
+			<div id="normal4" style="background-image: url(<?php echo get_theme_file_uri('/img/kitchen-ph.jpg'); ?>)">
+			</div>
+
+			<div id="normal5" style="background-image: url(<?php echo get_theme_file_uri('/img/lounge-ph.jpg'); ?>)">
+			</div>
+
+			<div id="normal6" style="background-image: url(<?php echo get_theme_file_uri('/img/bbq-ph.jpg'); ?>)">
+			</div>
+			
+			<div id="normal7" style="background-image: url(<?php echo get_theme_file_uri('/img/campfire-ph.jpg'); ?>)">
+			</div>
+			
+			<div id="normal8" style="background-image: url(<?php echo get_theme_file_uri('/img/flowers-ph.jpg'); ?>)">
+			</div>
+
+		</div>
+		<div id="thumbs">
+			<a href="javascript: changeImage(1);"><img src="<?php echo get_theme_file_uri('/img/beach-ph.jpg'); ?>" alt="" /></a>
+			<a href="javascript: changeImage(2);"><img src="<?php echo get_theme_file_uri('/img/chalet-ph.jpg'); ?>" alt="" /></a>
+			<a href="javascript: changeImage(3);"><img src="<?php echo get_theme_file_uri('/img/garden-ph.jpg'); ?>" alt="" /></a>
+			<a href="javascript: changeImage(4);"><img src="<?php echo get_theme_file_uri('/img/kitchen-ph.jpg'); ?>" alt="" /></a>
+			<a href="javascript: changeImage(5);"><img src="<?php echo get_theme_file_uri('/img/lounge-ph.jpg'); ?>" alt="" /></a>
+			<a href="javascript: changeImage(6);"><img src="<?php echo get_theme_file_uri('/img/bbq-ph.jpg'); ?>" alt="" /></a>
+			<a href="javascript: changeImage(7);"><img src="<?php echo get_theme_file_uri('/img/campfire-ph.jpg'); ?>" alt="" /></a>
+			<a href="javascript: changeImage(8);"><img src="<?php echo get_theme_file_uri('/img/flowers-ph.jpg'); ?>" alt="" /></a>
+		</div>
+	</div>
+</section>
 <div class="panels-cont">
 	<h2>The Best Of Exmouth</h2>
 	<div class="panels">

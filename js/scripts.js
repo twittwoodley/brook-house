@@ -14,6 +14,21 @@
 
     window.addEventListener('scroll', fixNav);
 */
+
+//Gallery JS
+function changeImage(current) {
+  var imagesNumber = 8;
+
+  for (i=1; i<=imagesNumber; i++) {
+    if (i == current) {
+      document.getElementById("normal" + current).style.opacity = "1";
+    } else {
+      document.getElementById("normal" + i).style.opacity = "0";
+    }
+  }
+}
+
+
 // Flex Panels JS
     const panels = document.querySelectorAll('.panel');
     const underlay = document.querySelectorAll('.dark-underlay');
