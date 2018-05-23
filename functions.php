@@ -1,14 +1,14 @@
 <?php
 function brook_house_theme_files() {
 	//wp_enqueue_script('jquery');
-	wp_enqueue_script('google-map', '//maps.googleapis.com/maps/api/js?key=AIzaSyC9zI3I2TQYp5JJ2rksxJ2QV4vp8wjHCIE', NULL, microtime(), true);
-	wp_enqueue_script('main-js', get_theme_file_uri('/js/scripts.js'), NULL, microtime(), true);
 	wp_enqueue_style('custom-google-font', '//fonts.googleapis.com/css?family=Parisienne|Poiret+One'); //Google Font
 	//wp_enqueue_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'); //Font Awesome
 	wp_enqueue_style('font-awesome', '//use.fontawesome.com/releases/v5.0.13/css/all.css'); //Font Awesome
 	//wp_enqueue_style('university_main_styles',get_stylesheet_uri(), NULL, microtime()	); //style.css in theme route
 	wp_enqueue_style('main-styling', get_theme_file_uri('/css/main.css'), NULL, microtime());
 	wp_enqueue_style('mobile-styling', get_theme_file_uri('/css/mobile.css'), NULL, microtime());
+	wp_enqueue_script('google-map', '//maps.googleapis.com/maps/api/js?key=AIzaSyC9zI3I2TQYp5JJ2rksxJ2QV4vp8wjHCIE', NULL, microtime(), true);
+	wp_enqueue_script('main-js', get_theme_file_uri('/js/scripts.js'), NULL, microtime(), true);
 }
 add_action('wp_enqueue_scripts', 'brook_house_theme_files');
 

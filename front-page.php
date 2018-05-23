@@ -78,7 +78,8 @@ Etiam a feugiat augue. Vivamus a finibus purus, id posuere turpis. Vestibulum qu
 	<h3>Have a look at Brook House Annexe</h3>
 	<?php echo do_shortcode('[metaslider id="42"]'); ?>
 </div> -->
-<section>
+
+<!--<section>
 	<div id="gallery">
 
 
@@ -120,7 +121,7 @@ Etiam a feugiat augue. Vivamus a finibus purus, id posuere turpis. Vestibulum qu
 			<a href="javascript: changeImage(8);"><img src="<?php echo get_theme_file_uri('/img/flowers-ph.jpg'); ?>" alt="" /></a>
 		</div>
 	</div>
-</section>
+</section>-->
 <div class="panels-cont">
 	<h2>The Best Of Exmouth</h2>
 	<div class="panels">
@@ -146,6 +147,29 @@ Etiam a feugiat augue. Vivamus a finibus purus, id posuere turpis. Vestibulum qu
 	  </div>
 </div>
 </div><!-- Content-wrap closing div -->
+<section>
+	<div id="gallery">
+		<div id="bigimages">
+
+<?php
+	$gallery = get_post_gallery_images(48);	
+	$counter = 1;
+	$counter2 = 1;
+
+
+	// Loop through each image in each gallery
+	foreach( $gallery as $image_url ) { ?>
+					<div id="normal<?php echo $counter++ ?>" style="background-image: url(<?php echo $image_url ?>);">
+			</div>
+		<?php
+	}	?></div>
+			<div id="thumbs">
+	<?php foreach( $gallery as $image_url ) { ?>
+			<a href="javascript: changeImage(<?php echo $counter2++ ?>);"><img src="<?php echo $image_url ?>"/></a>
+		<?php
+	}
+ ?>
+</div></div></section>
 <?php
 	get_footer();
 ?>

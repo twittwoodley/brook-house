@@ -16,11 +16,13 @@
 */
 
 //Gallery JS
+
 function changeImage(current) {
-  var imagesNumber = 8;
+  var imagesNumber = 3;
 
   for (i=1; i<=imagesNumber; i++) {
     if (i == current) {
+            console.log(current);
       document.getElementById("normal" + current).style.opacity = "1";
     } else {
       document.getElementById("normal" + i).style.opacity = "0";
