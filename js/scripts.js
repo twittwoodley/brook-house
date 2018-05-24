@@ -16,9 +16,8 @@
 */
 
 //Gallery JS
-
 function changeImage(current) {
-  var imagesNumber = 3;
+  var imagesNumber = document.getElementById('bigimages').childElementCount;
 
   for (i=1; i<=imagesNumber; i++) {
     if (i == current) {

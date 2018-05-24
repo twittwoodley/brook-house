@@ -79,49 +79,33 @@ Etiam a feugiat augue. Vivamus a finibus purus, id posuere turpis. Vestibulum qu
 	<?php echo do_shortcode('[metaslider id="42"]'); ?>
 </div> -->
 
-<!--<section>
+<section>
 	<div id="gallery">
-
-
 		<div id="bigimages">
-			<div id="normal1" style="background-image: url(<?php echo get_theme_file_uri('/img/beach-ph.jpg'); ?>)">
-				<div class="inner-gallery-overlay">This is the image description</div>
-			</div>
 
-			<div id="normal2" style="background-image: url(<?php echo get_theme_file_uri('/img/chalet-ph.jpg'); ?>)">
-			</div>
-			
-			<div id="normal3" style="background-image: url(<?php echo get_theme_file_uri('/img/garden-ph.jpg'); ?>)">
-			</div>
+			<?php
+			$gallery = get_post_gallery_images_with_info();	
+			$counter = 1;
+			$counter2 = 1;
 
-			<div id="normal4" style="background-image: url(<?php echo get_theme_file_uri('/img/kitchen-ph.jpg'); ?>)">
-			</div>
 
-			<div id="normal5" style="background-image: url(<?php echo get_theme_file_uri('/img/lounge-ph.jpg'); ?>)">
-			</div>
-
-			<div id="normal6" style="background-image: url(<?php echo get_theme_file_uri('/img/bbq-ph.jpg'); ?>)">
-			</div>
-			
-			<div id="normal7" style="background-image: url(<?php echo get_theme_file_uri('/img/campfire-ph.jpg'); ?>)">
-			</div>
-			
-			<div id="normal8" style="background-image: url(<?php echo get_theme_file_uri('/img/flowers-ph.jpg'); ?>)">
-			</div>
-
+				// Loop through each image in each gallery
+			foreach( $gallery as $image_obj ) { ?>
+				<div class="main-image" id="normal<?php echo $counter++ ?>" style="background-image: url(<?php echo $image_obj['src'] ?>);">
+					<div class="inner-gallery-overlay"><?php echo $image_obj['caption']	?></div>
+				</div>
+				<?php
+			} ?>
 		</div>
 		<div id="thumbs">
-			<a href="javascript: changeImage(1);"><img src="<?php echo get_theme_file_uri('/img/beach-ph.jpg'); ?>" alt="" /></a>
-			<a href="javascript: changeImage(2);"><img src="<?php echo get_theme_file_uri('/img/chalet-ph.jpg'); ?>" alt="" /></a>
-			<a href="javascript: changeImage(3);"><img src="<?php echo get_theme_file_uri('/img/garden-ph.jpg'); ?>" alt="" /></a>
-			<a href="javascript: changeImage(4);"><img src="<?php echo get_theme_file_uri('/img/kitchen-ph.jpg'); ?>" alt="" /></a>
-			<a href="javascript: changeImage(5);"><img src="<?php echo get_theme_file_uri('/img/lounge-ph.jpg'); ?>" alt="" /></a>
-			<a href="javascript: changeImage(6);"><img src="<?php echo get_theme_file_uri('/img/bbq-ph.jpg'); ?>" alt="" /></a>
-			<a href="javascript: changeImage(7);"><img src="<?php echo get_theme_file_uri('/img/campfire-ph.jpg'); ?>" alt="" /></a>
-			<a href="javascript: changeImage(8);"><img src="<?php echo get_theme_file_uri('/img/flowers-ph.jpg'); ?>" alt="" /></a>
+			<?php foreach( $gallery as $image_obj ) { ?>
+			<a href="javascript: changeImage(<?php echo $counter2++ ?>);"><img src="<?php echo $image_obj['src'] ?>"/></a>
+		<?php
+		}?>
 		</div>
 	</div>
-</section>-->
+</section>
+
 <div class="panels-cont">
 	<h2>The Best Of Exmouth</h2>
 	<div class="panels">
@@ -147,29 +131,6 @@ Etiam a feugiat augue. Vivamus a finibus purus, id posuere turpis. Vestibulum qu
 	  </div>
 </div>
 </div><!-- Content-wrap closing div -->
-<section>
-	<div id="gallery">
-		<div id="bigimages">
-
-<?php
-	$gallery = get_post_gallery_images(48);	
-	$counter = 1;
-	$counter2 = 1;
-
-
-	// Loop through each image in each gallery
-	foreach( $gallery as $image_url ) { ?>
-					<div id="normal<?php echo $counter++ ?>" style="background-image: url(<?php echo $image_url ?>);">
-			</div>
-		<?php
-	}	?></div>
-			<div id="thumbs">
-	<?php foreach( $gallery as $image_url ) { ?>
-			<a href="javascript: changeImage(<?php echo $counter2++ ?>);"><img src="<?php echo $image_url ?>"/></a>
-		<?php
-	}
- ?>
-</div></div></section>
 <?php
 	get_footer();
 ?>
